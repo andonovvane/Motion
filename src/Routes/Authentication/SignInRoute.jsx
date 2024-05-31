@@ -5,8 +5,8 @@
 // import { loadUser, login } from "../Store/Slices/userSlice";
 import { useNavigate } from "react-router-dom";
 import MotionSignInLogo from "../../Components/MotionBg/MotionLoginBg";
-import { SignInButton } from "../../Styles/Button";
-import { SignInDiv, StyledForm, StyledH1Form, StyledHeader, StyledHeaderButton, StyledInput, StyledLeftDiv, StyledMainDiv, StyledRightDiv } from "../../Styles/SignInUpStyles";
+import { StyledSubmitButton } from "../../Styles/Buttons";
+import { SignInDiv, StyledForm, StyledH1Form, StyledHeader, StyledHeaderButton, StyledInput, StyledLeftDiv, StyledMainDiv, StyledRightDiv } from "../../Styles/Authentication/SignInUpStyles";
 
 
 const Login = () => {
@@ -27,20 +27,24 @@ const Login = () => {
                         <StyledHeaderButton
                             onClick={handleSignUpClick}>Sign Up</StyledHeaderButton>
                 </StyledHeader>
-                        <StyledForm action="">
+                        <StyledForm action="submit">
                             <StyledH1Form>Sign In</StyledH1Form>
                             <StyledInput
                                 type="email"
                                 placeholder="Email"
+                                required
                             />
                             <StyledInput 
                                 type="password"
                                 placeholder="Password"
+                                required
                             />
+                            <SignInDiv>
+                                <StyledSubmitButton
+                                    type="submit"
+                                    >Sign In</StyledSubmitButton>
+                            </SignInDiv>
                         </StyledForm>
-                    <SignInDiv>
-                        <SignInButton>Sign In</SignInButton>
-                    </SignInDiv>
             </StyledRightDiv>
         </StyledMainDiv>
     )

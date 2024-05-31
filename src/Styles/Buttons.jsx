@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SignInButton = styled.button`
+export const StyledSubmitButton = styled.button`
     display: flexbox;
 
     background: linear-gradient(102deg, rgba(115, 0, 186, 0.588), rgba(4, 57, 216, 0.52));

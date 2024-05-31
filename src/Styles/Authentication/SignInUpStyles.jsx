@@ -56,10 +56,16 @@ export const StyledInput = styled.input`
     flex-direction: row;
     width: 50%;
     margin-top: 3rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0.5rem 1rem;
     font-size: large;
     border: none;
     border-bottom: 0.5px solid black;
+
+    &:focus {
+        border-bottom: 2px solid;
+        border-color: blue ;
+        outline: none
+    }
 `
 export const SignInDiv = styled.div`
     display: flex;

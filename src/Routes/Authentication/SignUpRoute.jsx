@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MotionSignInLogo from "../../Components/MotionBg/MotionLoginBg";
 import { 
@@ -10,14 +11,28 @@ import {
     StyledMainDiv, 
     StyledRightDiv,
     SignInDiv,
-} from "../../Styles/SignInUpStyles"
-import { SignInButton } from "../../Styles/Button";
+} from "../../Styles/Authentication/SignInUpStyles"
+import { StyledSubmitButton } from "../../Styles/Buttons";
 
 const SignUp = () => {
-    const Navigate = useNavigate()
+    const navigate = useNavigate();
+    const [email, setEmail] = useState("");
 
     const handleSignInClick = () => {
-        Navigate('/')
+        navigate('/');
+    }
+
+    const handleSignUpClick = () => {
+        navigate('/verification');
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        handleSignUpClick();
+    }
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
     }
 
     return (
@@ -28,19 +43,21 @@ const SignUp = () => {
             <StyledRightDiv>
                 <StyledHeader>
                     <p>Already have an account?</p>
-                    <StyledHeaderButton
-                        onClick={handleSignInClick}>Sign In</StyledHeaderButton>
+                    <StyledHeaderButton onClick={handleSignInClick}>Sign In</StyledHeaderButton>
                 </StyledHeader>
-                <StyledForm>
+                <StyledForm onSubmit={handleSubmit}>
                     <StyledH1Form>Sign Up</StyledH1Form>
                     <StyledInput
                         type="email"
-                        placeholder="Email"    
+                        placeholder="Email"
+                        value={email}
+                        onChange={handleEmailChange}
+                        required    
                     />
+                    <SignInDiv>
+                        <StyledSubmitButton type="submit">Sign Up</StyledSubmitButton>
+                    </SignInDiv>
                 </StyledForm>
-                <SignInDiv>
-                    <SignInButton>Sign Up</SignInButton>
-                </SignInDiv>
             </StyledRightDiv>
         </StyledMainDiv>
     )
