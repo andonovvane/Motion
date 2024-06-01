@@ -72,3 +72,8 @@ export const SignInDiv = styled.div`
     align-self:center;
     margin-top: 5rem;
 `
+export const StyledErrorP = styled.p`
+    color: red;
+    font-size: 1rem;
+    margin-top: 2rem;
+`

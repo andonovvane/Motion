@@ -17,6 +17,11 @@ export const StyledVerificationForm = styled.form `
 export const StyledH1VerificationForm = styled.h1`
     display: flex;
     align-self: center;
+    font-size: 2rem;
+    background: linear-gradient(45deg, #8e44ad, #3498db);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 `
 
 export const StyledValidationInput = styled.input`
