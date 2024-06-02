@@ -12,7 +12,7 @@ import {
     StyledRightDiv,
     SignInDiv,
     StyledErrorP,
-} from "../../Styles/Authentication/SignInUpStyles"
+} from "../../Styles/AuthenticationStyles/SignInUpStyles"
 import { StyledSubmitButton } from "../../Styles/Buttons";
 import { api } from "../../API/api";
 

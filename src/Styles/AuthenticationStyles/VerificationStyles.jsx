@@ -49,7 +49,6 @@ export const StyledInputDiv = styled.div`
 export const StyledHalfInput = styled.input`
     width: 50%;
     border: none;
-    border: none;
     border-bottom: 1px solid;
     font-size: 1rem;
     padding: 1rem 2rem;

@@ -1,6 +1,6 @@
 import MotionSignInLogo from "../../Components/MotionBg/MotionLoginBg";
 import { StyledSubmitButton } from "../../Styles/Buttons";
-import { SignInDiv, StyledErrorP, StyledForm, StyledH1Form, StyledHeader, StyledHeaderButton, StyledInput, StyledLeftDiv, StyledMainDiv, StyledRightDiv } from "../../Styles/Authentication/SignInUpStyles";
+import { SignInDiv, StyledErrorP, StyledForm, StyledH1Form, StyledHeader, StyledHeaderButton, StyledInput, StyledLeftDiv, StyledMainDiv, StyledRightDiv } from "../../Styles/AuthenticationStyles/SignInUpStyles";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../API/api";
@@ -36,7 +36,7 @@ const Login = () => {
             dispatch(loadUser(res.data.user));
             console.log(res.data);
             setLoginError("");
-            navigate("/");
+            navigate("/posts");
         } catch (error) {
             console.log(error);
             if (error.response?.data?.detail) {

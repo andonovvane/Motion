@@ -1,4 +1,4 @@
-import { StyledAppIcon, StyledAppImg, StyledBtnDiv, StyledButton, StyledImg, StyledMain, StyledP, StyledSignInFooter, StyledSignInFooterIcons, StyledContentWrapper } from "../../Styles/Authentication/MotionSignInBgStyles";
+import { StyledAppIcon, StyledAppImg, StyledBtnDiv, StyledButton, StyledImg, StyledMain, StyledP, StyledSignInFooter, StyledSignInFooterIcons, StyledContentWrapper } from "../../Styles/AuthenticationStyles/MotionSignInBgStyles";
 
 const MotionSignInLogo = () => {
     return (

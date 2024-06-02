@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MotionSignInLogo from "../../Components/MotionBg/MotionLoginBg";
-import { StyledLeftDiv, StyledMainDiv, SignInDiv, StyledErrorP } from "../../Styles/Authentication/SignInUpStyles";
-import { StyledH1VerificationForm, StyledHalfInput, StyledInputDiv, StyledRightVerificationDiv, StyledValidationInput, StyledVerificationForm } from "../../Styles/Authentication/VerificationStyles"
+import { StyledLeftDiv, StyledMainDiv, SignInDiv, StyledErrorP } from "../../Styles/AuthenticationStyles/SignInUpStyles";
+import { StyledH1VerificationForm, StyledHalfInput, StyledInputDiv, StyledRightVerificationDiv, StyledValidationInput, StyledVerificationForm } from "../../Styles/AuthenticationStyles/VerificationStyles"
 import { StyledSubmitButton } from "../../Styles/Buttons";
 import { api } from "../../API/api";
 import { useDispatch } from "react-redux";
