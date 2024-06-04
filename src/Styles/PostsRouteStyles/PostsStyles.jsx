@@ -8,6 +8,7 @@ export const StyledPostsHeader = styled.header`
     align-items: center;
     justify-content: space-between;
     width: 100vw;
+    background-color: white;
 `
 
 export const StyledSearchField = styled.input`
@@ -39,4 +40,43 @@ export const StyledHeaderDiv = styled.div`
     flex-direction: row;
     gap: 1rem;
     margin-left: 10rem;
+`
+
+/************************************************************/
+
+export const StyledBodyPostsRoute = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    margin: 9rem 10rem 0 10rem;
+`
+
+export const StyledDivContainerPostsRoute = styled.div`
+    display: flex;
+`;
+
+export const StyledPostsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #333;
+    img {
+        align-self: center;
+    }
+    gap: 2rem;
+`
+
+export const StyledDivPostsRoute = styled.div`
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    
+`
+export const StyledIconNameWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
 `
