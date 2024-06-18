@@ -5,6 +5,7 @@ import { StyledBodyPostsRoute, StyledDivContainerPostsRoute, StyledDivPostsRoute
         StyleduserPostDiv, StyledProfileAndUserPostDiv, StyledPPostsRoute, StyledlikeSharePostsRoute,
         } from "../../Styles/PostsRouteStyles/PostsStyles";
 import { setPosts, likePost, incrementSkip } from "../../Store/Slices/postsSlice";
+import AddPost from "./AddPost";
 
 const Post = () => {
     const dispatch = useDispatch();
@@ -107,6 +108,7 @@ const Post = () => {
                 <p>Loading...</p>
                 ) : (
                 <StyledDivContainerPostsRoute>
+                    <AddPost />
                     {filteredPosts.map((post, index) => (
                     <StyledDivPostsRoute key={`${post.id}-${index}`}>
                         <StyleduserPostDiv>

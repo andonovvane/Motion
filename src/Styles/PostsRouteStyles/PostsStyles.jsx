@@ -67,8 +67,8 @@ export const StyledDivContainerPostsRoute = styled.div`
     overflow-y: auto;
     scrollbar-color: transparent transparent;
     -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-        width: 6px;
+    ::-webkit-scrollbar {
+        display: none;
     }
 
     position: fixed;
@@ -175,24 +175,50 @@ export const StyledDivAddPost = styled.div`
     }
 `;
 
-export const StyledModal = styled.div`
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-`;
 
-export const StyledOverlay = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+
+export const StyledAddPostDiv = styled.div `
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 37.5vw;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-`;
+    align-items: center;
+    gap: 1rem;
+    align-items: center;
+    
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    
+    input {
+        padding:1 2rem;
+        width: 65%;
+        font-size: 1rem;
+        border: none;
+    }
+    `
+    
+    export const StyledModal = styled.div`
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    `;
+    
+    export const StyledOverlay = styled.div`
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    `;
