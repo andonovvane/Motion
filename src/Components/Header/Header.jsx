@@ -18,12 +18,12 @@ import { StyledAHeaderRight,
 
     const Header = () => {
             const [isPopupVisible, setPopupVisible] = useState(false);
-            const [isNotificationsVisible, setNotificationsVisible] = useState(false);
+            // const [isNotificationsVisible, setNotificationsVisible] = useState(false);
             const dispatch = useDispatch();
         
-            const handleNotificationsClick = () => {
-                setNotificationsVisible(!isNotificationsVisible);
-            }
+            // const handleNotificationsClick = () => {
+            //     setNotificationsVisible(!isNotificationsVisible);
+            // }
         
             const handleHeaderClick = (event) => {
                 event.preventDefault();
@@ -48,7 +48,7 @@ import { StyledAHeaderRight,
                                 <StyledImg src="src/Motion-assets/images/posts_logo.png" />
                                 <StyledP>Posts</StyledP>
                             </StyledAHeader>
-                            <StyledAHeader  href="">
+                            <StyledAHeader  href="/findfriends">
                                 <StyledImg src="src/Motion-assets/svgs/icon-friends.svg" />
                                 <StyledP>Find Friends</StyledP>
                             </StyledAHeader>
@@ -57,10 +57,10 @@ import { StyledAHeaderRight,
 
                     <StyledRighContainer>
                         <StyledSectionHeader>
-                            <StyledAHeaderRight href="" onClick={handleNotificationsClick}>
+                            {/* <StyledAHeaderRight href="" onClick={handleNotificationsClick}>
                                 <StyledImg src="src/Motion-assets/svgs/notification_bell.svg" />
-                            </StyledAHeaderRight>
-                            <StyledAHeaderRight  href="">
+                            </StyledAHeaderRight> */}
+                            <StyledAHeaderRight  href="/userprofile">
                                 <StyledImg src="src/Motion-assets/svgs/avatar.svg" />
                             </StyledAHeaderRight>
                             <StyledAHeaderRight  href="" onClick={(event) => handleHeaderClick(event)}>
@@ -70,7 +70,7 @@ import { StyledAHeaderRight,
                     </StyledRighContainer>
                     {isPopupVisible && (
                     <ThreeDotsSpan>
-                        <StyledATag href="">
+                        <StyledATag href="/userprofile">
                             <StyledImgPopUp src="src/Motion-assets/svgs/avatar.svg" />
                             Profile
                             </StyledATag>
