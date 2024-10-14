@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { api } from "../../API/api";
 import { useDispatch, useSelector } from "react-redux";
 import { incrementSkip, likePost, setPosts } from "../../Store/Slices/postsSlice";
-import placeholderAvatar from "../../assets/svgs/avatar.svg"
-import like from "../../assets/svgs/heart.svg"
-import share from "../../assets/svgs/share.svg"
+import placeholderAvatar from "../../../public/assets/svgs/avatar.svg"
+import like from "../../../public/assets/svgs/heart.svg"
+import share from "../../../public/assets/svgs/share.svg"
 import PostsFilterHeader from "../../Components/PostsFilterHeader";
 // import upload from "../../assets/images/send_button.png"
 import { selectSearchTerm } from "../../Store/Slices/searchSlice";

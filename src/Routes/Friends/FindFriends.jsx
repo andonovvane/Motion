@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../API/api";
-import userAvatar from "../../assets/svgs/avatar.svg";
+import userAvatar from "../../../public/assets/svgs/avatar.svg";
 import { useSelector } from "react-redux";
 import { selectDetails } from "../../Store/Slices/userSlice";
 

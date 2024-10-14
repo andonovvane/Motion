@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import motionWhite from '../../assets/images/logo_white.png';
+import motionWhite from '../../../public/assets/images/logo_white.png';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../API/api';
 

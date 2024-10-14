@@ -1,6 +1,6 @@
 import { useState } from 'react';
 // import { useEffect } from 'react';
-import motionWhite from '../../assets/images/logo_white.png';
+import motionWhite from '../../../public/assets/images/logo_white.png';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../API/api';
 import { useDispatch } from 'react-redux';

@@ -1,6 +1,6 @@
-import avatarPlaceholder from "../assets/svgs/avatar.svg";
-import uploadIcon from "../assets/svgs/uploadicon.svg"
-import upload from "../assets/images/send_button.png";
+import avatarPlaceholder from "../../public/assets/svgs/avatar.svg";
+import uploadIcon from "../../public/assets/svgs/uploadicon.svg"
+import upload from "../../public/assets/images/send_button.png";
 import { useEffect, useState } from "react";
 import { api } from "../API/api";
 import { useDispatch } from "react-redux";

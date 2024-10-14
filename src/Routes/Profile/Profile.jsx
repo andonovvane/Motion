@@ -2,12 +2,12 @@ import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { api } from "../../API/api";
 import { likePost } from "../../Store/Slices/postsSlice";
-import placeholderAvatar from "../../assets/svgs/avatar.svg";
-import like from "../../assets/svgs/heart.svg"
-import share from "../../assets/svgs/share.svg"
-import motionbg from "../../assets/images/motionbg.png";
-import uploadIcon from "../../assets/svgs/uploadIcon.svg"
-import deleteIcon from "../../assets/svgs/deleteIcon.svg"
+import placeholderAvatar from "../../../public/assets/svgs/avatar.svg";
+import like from "../../../public/assets/svgs/heart.svg"
+import share from "../../../public/assets/svgs/share.svg"
+import motionbg from "../../../public/assets/images/motionbg.png";
+import uploadIcon from "../../../public/assets/svgs/uploadIcon.svg"
+import deleteIcon from "../../../public/assets/svgs/deleteIcon.svg"
 
 const Profile = () => {
     const dispatch = useDispatch();

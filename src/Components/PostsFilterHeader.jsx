@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import search from "../assets/svgs/search_icon.svg"
+import search from "../../public/assets/svgs/search_icon.svg"
 import { selectSearchTerm, setSearchTerm } from "../Store/Slices/searchSlice";
 import PropTypes from "prop-types";
 
