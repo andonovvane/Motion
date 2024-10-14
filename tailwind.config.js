@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'auth-bgImage': "url('./src/assets/images/background_image.png')",
-        'motion-white-logo': "url('./src/assets/images/logo_white.png')"
+        'auth-bgImage': "url('././public/src/assets/images/background_image.png')",
+        'motion-white-logo': "url('././public/src/assets/images/logo_white.png')"
         // 'motion-white-logo': "url('')"
       },
     },
