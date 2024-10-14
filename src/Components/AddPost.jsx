@@ -1,5 +1,5 @@
 import avatarPlaceholder from "../../public/assets/svgs/avatar.svg";
-import uploadIcon from "../../public/assets/svgs/uploadicon.svg"
+import uploadIcon from "../../public/assets/svgs/uploadIcon.svg"
 import upload from "../../public/assets/images/send_button.png";
 import { useEffect, useState } from "react";
 import { api } from "../API/api";
