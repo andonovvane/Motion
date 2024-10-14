@@ -78,19 +78,19 @@ const Verification = () => {
             </div>
             <div className="flex flex-col w-3/5 mt-4 justify-start">
 
-                <form className='mt-20' onSubmit={handleSubmit} >  
+                <form className='mt-[10%]' onSubmit={handleSubmit} >  
                     <div className='flex flex-col items-center'>     
                         <h1 className='text-5xl'>Verification</h1>
-                        <input className='mt-10 p-2 border-b-2' type="text" placeholder="Validation Code" name="validationcode" value={formData.validationCode} onChange={handleInputChange} required />
-                        <div className='grid grid-rows-3 grid-flow-col gap-6'>
-                            <input className='mt-10 p-2 border-b-2' type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} required />
-                            <input className='mt-10 p-2 border-b-2' type="text" placeholder="First Name" name="firstname" value={formData.firstName} onChange={handleInputChange} required />
-                            <input className='mt-10 p-2 border-b-2' type="password" placeholder="Password" name="password" value={formData.password} onChange={handleInputChange} required />
-                            <input className='mt-10 p-2 border-b-2' type="text" placeholder="Username" name="username" value={formData.username} onChange={handleInputChange} required />
-                            <input className='mt-10 p-2 border-b-2' type="text" placeholder="Last Name" name="lastname" value={formData.lastName} onChange={handleInputChange} required />
-                            <input className='mt-10 p-2 border-b-2' type="password" placeholder="Password Repeat" name="passwordrepeat" value={formData.passwordRepeat} onChange={handleInputChange} required />
+                        <input className='mt-[5%] p-2 border-b-2 w-[25%]' type="text" placeholder="Validation Code" name="validationcode" value={formData.validationCode} onChange={handleInputChange} required />
+                        <div className='grid grid-rows-3 grid-flow-col gap-6 w-[70%]'>
+                            <input className='mt-[20%] p-2 border-b-2 w-full' type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} required />
+                            <input className='mt-[20%] p-2 border-b-2' type="text" placeholder="First Name" name="firstname" value={formData.firstName} onChange={handleInputChange} required />
+                            <input className='mt-[20%] p-2 border-b-2' type="password" placeholder="Password" name="password" value={formData.password} onChange={handleInputChange} required />
+                            <input className='mt-[20%] p-2 border-b-2' type="text" placeholder="Username" name="username" value={formData.username} onChange={handleInputChange} required />
+                            <input className='mt-[20%] p-2 border-b-2' type="text" placeholder="Last Name" name="lastname" value={formData.lastName} onChange={handleInputChange} required />
+                            <input className='mt-[20%] p-2 border-b-2' type="password" placeholder="Password Repeat" name="passwordrepeat" value={formData.passwordRepeat} onChange={handleInputChange} required />
                         </div>
-                        <button className='text-white mt-16 border-2 py-4 px-20 rounded-full bg-gradient-to-br from-fuchsia-600 to-indigo-500 opacity-75' type="submit">Complete</button>   
+                        <button className='text-white mt-[8%] border-2 py-4 px-20 rounded-full bg-gradient-to-br from-fuchsia-600 to-indigo-500 opacity-75' type="submit">Complete</button>   
                     </div>   
                 </form> 
             </div>

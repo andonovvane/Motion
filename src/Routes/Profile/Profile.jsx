@@ -404,7 +404,7 @@ const Profile = () => {
 
             {/* My Posts Section */}
             {(!editProfie) ? (
-                <div className="grid grid-cols-2 gap-6 auto-rows-auto mt-[50px] mx-16">
+                <div className="grid grid-cols-2 gap-6 auto-rows-auto mt-[50px] mx-[5%]">
                     {myPosts.length > 0 ? (
                         myPosts.map((post) => (
                             <div key={post.id} className="bg-white rounded-lg shadow-md p-4 flex flex-col justify-between border w-full">

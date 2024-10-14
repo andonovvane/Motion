@@ -33,7 +33,7 @@ const CodeSent = () => {
                     <button className='pr-7 pl-7 pt-2 pb-2 border-2 rounded-full' onClick={handleSignIn}>Sign In</button>
                 </div>
 
-                <form className='mt-40'>  
+                <form className='mt-[25%]'>  
                     <div className='flex flex-col items-center'>     
                         <h1 className='text-5xl'>Code Sent!</h1>
                         <a className='mt-8'>We`ve sent a reset code to your email!</a>   

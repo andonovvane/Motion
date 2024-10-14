@@ -45,10 +45,10 @@ const ForgotPassword = () => {
                     <button className='pr-7 pl-7 pt-2 pb-2 border-2 rounded-full' onClick={handleSignUp}>Sign Up</button>
                 </div>
 
-                <form className='mt-40' onSubmit={handleSubmit}>  
+                <form className='mt-[25%]' onSubmit={handleSubmit}>  
                     <div className='flex flex-col items-center'>     
                         <h1 className='text-5xl'>Forgot Password?</h1>  
-                        <input className='mt-10 p-2 border-b-2' type="email" placeholder="Email" name="email" value={email} onChange={handleEmail} required />  
+                        <input className='mt-10 p-2 border-b-2 w-[25%]' type="email" placeholder="Email" name="email" value={email} onChange={handleEmail} required />  
                         <button className='text-white mt-16 border-2 py-4 px-20 rounded-full bg-gradient-to-br from-fuchsia-600 to-indigo-500 opacity-75' type="submit">Send Code</button>   
                     </div>   
                 </form> 

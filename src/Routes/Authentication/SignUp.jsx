@@ -60,10 +60,10 @@ const SignUp = () => {
                     <button className='pr-7 pl-7 pt-2 pb-2 border-2 rounded-full' onClick={handleSignIn}>Sign In</button>
                 </div>
 
-                <form className='mt-40' onSubmit={handleSubmit}>  
+                <form className='mt-[25%]' onSubmit={handleSubmit}>  
                     <div className='flex flex-col items-center'>     
                         <h1 className='text-5xl'>Sign Up</h1> 
-                        <input className='mt-10 p-2 border-b-2' type="email" placeholder="Email" name="email" value={email} onChange={handleEmailValue} required />
+                        <input className='mt-10 p-2 border-b-2 w-[25%]' type="email" placeholder="Email" name="email" value={email} onChange={handleEmailValue} required />
                         {isEmailTaken && (
                             <div className='mt-6 text-red-500'>{emailError}</div>
                         )}

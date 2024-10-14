@@ -54,13 +54,13 @@ const ResetPassword = () => {
                 <button className='pr-7 pl-7 pt-2 pb-2 border-2 rounded-full' onClick={handleSignUp}>Sign Up</button>
                 </div>
 
-                <form className='mt-20' onSubmit={handleSubmit}>  
+                <form className='mt-[12%]' onSubmit={handleSubmit}>  
                     <div className='flex flex-col items-center'>     
                         <h1 className='text-5xl'>Reset Password</h1>
-                        <input className='mt-10 p-2 border-b-2' type="text" placeholder="Code" name="code" value={formData.code} onChange={handleInputChange} required />  
-                        <input className='mt-10 p-2 border-b-2' type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} required />  
-                        <input className='mt-10 p-2 border-b-2' type="password" placeholder="Password" name="password" value={formData.password} onChange={handleInputChange} required />  
-                        <input className='mt-10 p-2 border-b-2' type="password" placeholder="Password Repeat" name="passwordrepeat" value={formData.passwordRepeat} onChange={handleInputChange} required />    
+                        <input className='mt-10 p-2 border-b-2 w-[25%]' type="text" placeholder="Code" name="code" value={formData.code} onChange={handleInputChange} required />  
+                        <input className='mt-10 p-2 border-b-2 w-[25%]' type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} required />  
+                        <input className='mt-10 p-2 border-b-2 w-[25%]' type="password" placeholder="Password" name="password" value={formData.password} onChange={handleInputChange} required />  
+                        <input className='mt-10 p-2 border-b-2 w-[25%]' type="password" placeholder="Password Repeat" name="passwordrepeat" value={formData.passwordRepeat} onChange={handleInputChange} required />    
                         <button className='text-white mt-16 border-2 py-4 px-12 rounded-full bg-gradient-to-br from-fuchsia-600 to-indigo-500 opacity-75' type="submit">Confirm new password</button>   
                     </div>   
                 </form> 
