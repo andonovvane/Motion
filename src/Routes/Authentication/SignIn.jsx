@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // import { useEffect } from 'react';
 import motionWhite from '../../../public/assets/images/logo_white.png';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { api } from '../../API/api';
 import { useDispatch } from 'react-redux';
 // import { useSelector } from 'react-redux';
@@ -9,10 +9,11 @@ import { login } from '../../Store/Slices/userSlice';
 // import { selectDetails } from '../../Store/Slices/userSlice';
 
 const Login = () => {
-    const [email, setEmailValue] = useState('');
-    const [password, setPasswordValue] = useState('');
+    const [email, setEmailValue] = useState('andonov.vane2@gmail.com');
+    const [password, setPasswordValue] = useState('Andonovmotion2024');
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const loc = useLocation();
     // const userDetails = useSelector(selectDetails);
 
     const handleSignUp = () => {
@@ -42,12 +43,13 @@ const Login = () => {
 
             dispatch(login({ accessToken, details: userDetails }));
 
-            // console.log('User details:', userDetails);
-            navigate('/posts');
+            const target = loc.state?.origin || "/posts";
+            navigate(target);
         } catch (error) {
             console.log(error);
         }
     };
+
 
     // useEffect(() => {
     //     if (userDetails) {

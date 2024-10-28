@@ -6,9 +6,9 @@ import placeholderAvatar from "../../../public/assets/svgs/avatar.svg"
 import like from "../../../public/assets/svgs/heart.svg"
 import share from "../../../public/assets/svgs/share.svg"
 import PostsFilterHeader from "../../Components/PostsFilterHeader";
-// import upload from "../../assets/images/send_button.png"
 import { selectSearchTerm } from "../../Store/Slices/searchSlice";
 import AddPost from "../../Components/AddPost";
+// import useHandleLike from "../../hooks/useHandleLike";
 
 
 const Posts = () => {
@@ -16,7 +16,8 @@ const Posts = () => {
     const skip = useSelector((state) => state.posts.skip);
     const postsList = useSelector((state) => state.posts.posts);
     const searchTerm = useSelector(selectSearchTerm);
-    const [filter, setFilter] = useState('all');        
+    const [filter, setFilter] = useState('all');   
+    // const { handleLike, postsList } = useHandleLike();
 
     useEffect (() => {
         const getPosts = async () => {
@@ -43,7 +44,7 @@ const Posts = () => {
             }
         }
         getPosts();
-    }, [filter, dispatch, skip])
+    }, [filter, dispatch, skip, searchTerm])
 
     const filteredPosts = postsList.filter(
         (post) =>
@@ -79,33 +80,37 @@ const Posts = () => {
             console.log(error);
         }
     }
+    const getUrlForFilter = (filter) => {
+        switch (filter) {
+            case 'liked':
+                return "/social/posts/likes/";
+            case 'friends':
+                return "/social/posts/friends/";
+            case 'follow':
+                return "/social/posts/following/";
+            default:
+                return "/social/posts/";
+        }
+    }    
     const handleLoadMore = async () => {
+        const nextSkip = skip + 50;
+        try {
+            const token = localStorage.getItem("accessToken");
+            let url = getUrlForFilter(filter);
+    
+            const res = await api.get(url, {
+                headers: { Authorization: `Bearer ${token}` },
+                params: { skip: nextSkip, limit: 50 }
+            });
+    
+            const newPosts = [...postsList, ...res.data.results];
+            dispatch(setPosts(newPosts));
             dispatch(incrementSkip());
-            try {
-                const token = localStorage.getItem("accessToken");
-                let url;
-                if (filter === 'liked') { url = "/social/posts/likes/" }
-                else if (filter === 'friends') { url = "/social/posts/friends/" }
-                else if (filter === 'follow') { url = "/social/posts/following/" }
-                else { url = "/social/posts/" }
-
-                const res = await api.get(url, {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                    params: {
-                        skip,
-                        limit: 50,
-                    }
-                });
-                // Create a new state object with updated posts
-                const newPosts = [...postsList, ...res.data.results];
-                dispatch(setPosts(newPosts));
-            }
-            catch (error) {
+        } catch (error) {
             console.log(error);
-            }
-        };
+        }
+    };
+    
 
     console.log(postsList);
 

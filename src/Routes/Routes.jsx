@@ -10,6 +10,7 @@ import Posts from "./Posts/Posts";
 import Layout from "./Layout/Layout";
 import FindFriends from "./Friends/FindFriends";
 import Profile from "./Profile/Profile";
+import ProtectedRoute from "./ProtectedRoute";
 
 const Router = () => {
 
@@ -24,10 +25,12 @@ const Router = () => {
                     <Route path="/forgotpassword" element={<ForgotPassword />} />
                     <Route path="/codesent" element={<CodeSent />} />
                     <Route path="/resetpassword" element={<ResetPassword />} />
-                    <Route element={<Layout />}>
-                        <Route path="/posts" element={<Posts />} />
-                        <Route path="/findfriends" element={<FindFriends />} />
-                        <Route path="/profile" element={<Profile />} />
+                    <Route element={<ProtectedRoute />}>
+                        <Route element={<Layout />}>
+                            <Route path="/posts" element={<Posts />} />
+                            <Route path="/findfriends" element={<FindFriends />} />
+                            <Route path="/profile" element={<Profile />} />
+                        </Route>
                     </Route>
                 </Routes>
             </BrowserRouter>

@@ -18,6 +18,7 @@ const ForgotPassword = () => {
         e.preventDefault();
         try {
             const res = api.post("/auth/password-reset/", {email})
+            navigate('/resetpassword');
             console.log(res);
         } catch (error) {
             console.log(error)

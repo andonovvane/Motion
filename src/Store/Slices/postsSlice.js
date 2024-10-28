@@ -34,3 +34,5 @@ const postsSlice = createSlice ({
 
 export const { setPosts, addPost, likePost, incrementSkip } = postsSlice.actions;
 export default postsSlice.reducer;
+
+//like post can be changed istead of replacing the whole post with updated post i just can icrease the likes by 1 so i would need to make an api call for the updated post two times (first adding like, second reading the updated post)

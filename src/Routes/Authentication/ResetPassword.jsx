@@ -9,7 +9,7 @@ const ResetPassword = () => {
         code: "",
         email: "",
         password: "",
-        passwordrepeat: ""
+        password_repeat: ""
     })
 
     const handleInputChange = (e) => {
@@ -24,10 +24,9 @@ const ResetPassword = () => {
     }
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const {code, email, password, passwordrepeat} = formData;
+        const {code, email, password, password_repeat} = formData;
         try {
-            const res = api.patch("/auth/password-reset/validation/", {code,email,password,passwordrepeat});
-            console.log(res);
+            api.patch("/auth/password-reset/validation/", {code,email,password,password_repeat});
             navigate('/')
         } catch (error) {
             console.log(error)
@@ -60,7 +59,7 @@ const ResetPassword = () => {
                         <input className='mt-10 p-2 border-b-2 w-[25%]' type="text" placeholder="Code" name="code" value={formData.code} onChange={handleInputChange} required />  
                         <input className='mt-10 p-2 border-b-2 w-[25%]' type="email" placeholder="Email" name="email" value={formData.email} onChange={handleInputChange} required />  
                         <input className='mt-10 p-2 border-b-2 w-[25%]' type="password" placeholder="Password" name="password" value={formData.password} onChange={handleInputChange} required />  
-                        <input className='mt-10 p-2 border-b-2 w-[25%]' type="password" placeholder="Password Repeat" name="passwordrepeat" value={formData.passwordRepeat} onChange={handleInputChange} required />    
+                        <input className='mt-10 p-2 border-b-2 w-[25%]' type="password" placeholder="Password Repeat" name="password_repeat" value={formData.password_repeat} onChange={handleInputChange} required />    
                         <button className='text-white mt-16 border-2 py-4 px-12 rounded-full bg-gradient-to-br from-fuchsia-600 to-indigo-500 opacity-75' type="submit">Confirm new password</button>   
                     </div>   
                 </form> 
