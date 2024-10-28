@@ -84,8 +84,8 @@ const Login = () => {
                         <h1 className='text-5xl'>Sign In</h1>
                         <input className='mt-10 p-2 border-b-2 w-[25%]' type="email" placeholder="Email" name="email" value={email} onChange={handleEmail} required />  
                         <input className='mt-10 p-2 border-b-2 w-[25%]' type="password" placeholder="Password" name="password" value={password} onChange={handlePassword} required />
-                        <div onClick={handleForgotPassword}>
-                            <a className='mt-8 text-xs text-gray'>Forgot password? </a>                        
+                        <div onClick={handleForgotPassword} className='mt-8 text-xs text-gray hover:cursor-pointer'>
+                            <a>Forgot password?</a>                        
                         </div>  
                         <button className='text-white mt-16 border-2 py-4 px-20 rounded-full bg-gradient-to-br from-fuchsia-600 to-indigo-500 opacity-75' type="submit">Sign In</button> 
                     </div>   
